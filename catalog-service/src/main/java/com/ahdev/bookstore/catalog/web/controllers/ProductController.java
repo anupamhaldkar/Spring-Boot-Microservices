@@ -4,7 +4,6 @@ import com.ahdev.bookstore.catalog.domain.PagedResult;
 import com.ahdev.bookstore.catalog.domain.Product;
 import com.ahdev.bookstore.catalog.domain.ProductNotFoundException;
 import com.ahdev.bookstore.catalog.domain.ProductService;
-
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,7 +29,8 @@ public class ProductController {
 
     @GetMapping("/{code}")
     ResponseEntity<Product> getProductByCode(@PathVariable String code) {
-        return productService.getProductByCode(code)
+        return productService
+                .getProductByCode(code)
                 .map(ResponseEntity::ok)
                 .orElseThrow(() -> ProductNotFoundException.forCode(code));
     }
