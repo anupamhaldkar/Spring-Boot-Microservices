@@ -117,6 +117,7 @@
 				<configuration>
 					<image>
 						<name>${dockerImageName}</name>
+						<!-- <builder>dashaun/builder:tiny</builder> -->
 					</image>
 					<annotationProcessorPaths>
 						<path>
