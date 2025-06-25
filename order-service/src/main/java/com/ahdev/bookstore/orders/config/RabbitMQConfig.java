@@ -20,7 +20,6 @@ class RabbitMQConfig {
     RabbitMQConfig(ApplicationProperties properties) {
         this.properties = properties;
         System.out.println("Loaded ApplicationProperties: " + properties);
-
     }
 
     @Bean
