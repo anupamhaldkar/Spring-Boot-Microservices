@@ -10,6 +10,7 @@ class CatalogServiceClientConfig {
     @Bean
     RestClient restClient(
             // RestClient.Builder builder,
+           
             ApplicationProperties properties) {
         // ClientHttpRequestFactory requestFactory = ClientHttpRequestFactoryBuilder.simple()
         //         .withCustomizer(customizer -> {
