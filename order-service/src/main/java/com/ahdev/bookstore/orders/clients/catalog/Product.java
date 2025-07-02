@@ -1,4 +1,4 @@
-package com.ahdev.bookstore.orders.clients.config;
+package com.ahdev.bookstore.orders.clients.catalog;
 
 import java.math.BigDecimal;
 

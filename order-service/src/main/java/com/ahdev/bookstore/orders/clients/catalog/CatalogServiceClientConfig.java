@@ -1,4 +1,4 @@
-package com.ahdev.bookstore.orders.clients.config;
+package com.ahdev.bookstore.orders.clients.catalog;
 
 import com.ahdev.bookstore.orders.ApplicationProperties;
 import org.springframework.context.annotation.Bean;
