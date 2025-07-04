@@ -1,14 +1,16 @@
 package com.ahdev.bookstore.orders.clients.catalog;
 
 import java.util.Optional;
-import java.util.logging.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClient;
 
 @Component
 public class ProductServiceClient {
 
-    private static final Logger log = Logger.getLogger(ProductServiceClient.class.getName());
+    private static final Logger log = LoggerFactory.getLogger(ProductServiceClient.class);
 
     private final RestClient restClient;
 
