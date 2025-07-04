@@ -2,7 +2,6 @@ package com.ahdev.bookstore.orders.clients.catalog;
 
 import java.util.Optional;
 import java.util.logging.Logger;
-
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClient;
 
@@ -10,7 +9,7 @@ import org.springframework.web.client.RestClient;
 public class ProductServiceClient {
 
     private static final Logger log = Logger.getLogger(ProductServiceClient.class.getName());
-    
+
     private final RestClient restClient;
 
     ProductServiceClient(RestClient restClient) {
