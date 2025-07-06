@@ -18,9 +18,8 @@ public class OrderService {
     private final OrderValidator orderValidator;
     // private final OrderEventService orderEventService;
 
-    OrderService(OrderRepository orderRepository
-            , OrderValidator orderValidator
-            //, OrderEventService orderEventService
+    OrderService(OrderRepository orderRepository, OrderValidator orderValidator
+            // , OrderEventService orderEventService
             ) {
         this.orderRepository = orderRepository;
         this.orderValidator = orderValidator;
