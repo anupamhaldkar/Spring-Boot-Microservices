@@ -29,7 +29,7 @@ public class ProductServiceClient {
         } catch (Exception e) {
             log.error("Error fetching product for code {}: {}", code, e.getMessage());
             return Optional.empty();
-        }finally {
+        } finally {
             log.info("Finished fetching product for code: {}", code);
         }
     }
