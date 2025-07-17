@@ -19,6 +19,12 @@ public class ProductServiceClient {
     }
 
     @CircuitBreaker(name = "catalog-service")
+    /**
+     * Fetches a product by its code from the catalog service.
+     *
+     * @param code the product code
+     * @return an Optional containing the Product if found, or empty if not found or an error occurs
+     */
     public Optional<Product> getProductByCode(String code) {
         log.info("Fetching product for code: {}", code);
         try {
