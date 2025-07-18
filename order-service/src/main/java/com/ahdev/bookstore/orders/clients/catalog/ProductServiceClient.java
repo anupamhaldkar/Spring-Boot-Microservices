@@ -1,6 +1,8 @@
 package com.ahdev.bookstore.orders.clients.catalog;
 
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.retry.annotation.Retry;
+
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,6 +27,7 @@ public class ProductServiceClient {
      * @param code the product code
      * @return an Optional containing the Product if found, or empty if not found or an error occurs
      */
+    @Retry(name = "catalog-service")
     public Optional<Product> getProductByCode(String code) {
         log.info("Fetching product for code: {}", code);
         try {
