@@ -27,7 +27,7 @@ public class ProductServiceClient {
      * @param code the product code
      * @return an Optional containing the Product if found, or empty if not found or an error occurs
      */
-    @Retry(name = "catalog-service")
+    @Retry(name = "catalog-service", fallbackMethod = "getProductByCodeFallback")
     public Optional<Product> getProductByCode(String code) {
         log.info("Fetching product for code: {}", code);
         try {
@@ -43,5 +43,10 @@ public class ProductServiceClient {
         } finally {
             log.info("Finished fetching product for code: {}", code);
         }
+    }
+
+    Optional<Product> getProductByCodeFallback(String code, Throwable t) {
+        log.info("catalog-service get product by code fallback: code:{}, Error: {} ", code, t.getMessage());
+        return Optional.empty();
     }
 }
