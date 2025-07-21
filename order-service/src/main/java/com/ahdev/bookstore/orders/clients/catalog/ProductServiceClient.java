@@ -36,6 +36,7 @@ public class ProductServiceClient {
                     .retrieve()
                     .body(Product.class);
             return Optional.ofNullable(product);
+
         } catch (Exception e) {
             log.error("Error fetching product for code {}: {}", code, e.getMessage());
             return Optional.empty();
