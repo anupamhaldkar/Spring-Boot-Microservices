@@ -9,7 +9,7 @@ import org.springframework.web.client.RestClient;
 class CatalogServiceClientConfig {
     @Bean
     RestClient restClient(
-            // RestClient.Builder builder,
+            RestClient.Builder builder,
 
             ApplicationProperties properties) {
         // ClientHttpRequestFactory requestFactory = ClientHttpRequestFactoryBuilder.simple()
