@@ -8,10 +8,8 @@ import org.springframework.web.client.RestClient;
 @Configuration
 class CatalogServiceClientConfig {
     @Bean
-    RestClient restClient(
-            RestClient.Builder builder,
+    RestClient restClient(RestClient.Builder builder, ApplicationProperties properties) {
 
-            ApplicationProperties properties) {
         // ClientHttpRequestFactory requestFactory = ClientHttpRequestFactoryBuilder.simple()
         //         .withCustomizer(customizer -> {
         //             customizer.setConnectTimeout(Duration.ofSeconds(5));
