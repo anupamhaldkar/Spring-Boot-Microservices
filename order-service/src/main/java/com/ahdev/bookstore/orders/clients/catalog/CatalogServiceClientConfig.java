@@ -19,6 +19,7 @@ class CatalogServiceClientConfig {
         // return builder.baseUrl(properties.catalogServiceUrl())
         //         .requestFactory(requestFactory)
         //         .build();
+
         return RestClient.builder().baseUrl(properties.catalogServiceUrl()).build();
     }
 }
