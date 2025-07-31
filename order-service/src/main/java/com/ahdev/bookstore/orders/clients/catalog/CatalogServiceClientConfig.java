@@ -1,9 +1,7 @@
 package com.ahdev.bookstore.orders.clients.catalog;
 
 import com.ahdev.bookstore.orders.ApplicationProperties;
-
 import java.time.Duration;
-
 import org.springframework.boot.http.client.ClientHttpRequestFactoryBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,6 +23,6 @@ class CatalogServiceClientConfig {
                 .requestFactory(requestFactory)
                 .build();
 
-        //return RestClient.builder().baseUrl(properties.catalogServiceUrl()).build();
+        // return RestClient.builder().baseUrl(properties.catalogServiceUrl()).build();
     }
 }
