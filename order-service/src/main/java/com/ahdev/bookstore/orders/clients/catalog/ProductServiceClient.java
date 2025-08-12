@@ -41,6 +41,7 @@ public class ProductServiceClient {
             log.error("Error fetching product for code {}: {}", code, e.getMessage());
             return Optional.empty();
         } finally {
+
             log.info("Finished fetching product for code: {}", code);
         }
     }
